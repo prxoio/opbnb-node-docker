@@ -18,8 +18,8 @@ services:
       - ./envs/${NETWORK_NAME}/op-geth.env
       - .env
     ports:
-      - ${PORT__OP_GETH:-8545}:8545
-      - ${PORT__OP_GETH_WS:-8546}:8546  # Expose WS port
+      - ${PORT__OP_GETH:-8547}:8547
+      - ${PORT__OP_GETH_WS:-8548}:8548  # Expose WS port
     volumes:
       - ./scripts/:/scripts
       - ./jwt.txt:/jwt.txt
@@ -37,8 +37,8 @@ services:
     env_file:
       - .env
     ports:
-      - ${PORT__OP_NODE_P2P:-9003}:9003
-      - ${PORT__OP_NODE:-8546}:8546
+      - ${PORT__OP_NODE_P2P:-9004}:9004
+      - ${PORT__OP_NODE:-8551}:8551
     volumes:
       - ./scripts/:/scripts
       - ./jwt.txt:/jwt.txt
